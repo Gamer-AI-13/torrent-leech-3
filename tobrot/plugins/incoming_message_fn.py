@@ -85,11 +85,11 @@ async def incoming_statuz_message_f(client, message):
             LOGGER.info(msg)
             
             if msg == "":
-                msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs"
+                msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs \nI'm free now🥴"
             
             if prev_msg == msg:
                 await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
-                msg += "\n**Over & Out** 🔊"
+                msg += "\n😊**Over & Out** 🔊"
                 LOGGER.info(msg)
                 await msg_statuz.edit(msg)
                 break;
@@ -137,7 +137,7 @@ async def incoming_message_f(client, message):
     if dl_url is not None:
         akcm = dl_url.split('\n')
         for akc_url in akcm:
-            await i_m_sefg.edit_text("extracting links")
+            await i_m_sefg.edit_text("extracting links. please wait/")
             # start the aria2c daemon
             aria_i_p = await aria_start()
             LOGGER.info(aria_i_p)
@@ -151,7 +151,7 @@ async def incoming_message_f(client, message):
             # create download directory, if not exist
             if not os.path.isdir(new_download_location):
                 os.makedirs(new_download_location)
-            await i_m_sefg.edit_text("trying to download")
+            await i_m_sefg.edit_text("trying to download. This will take some time please wait")
             # try to download the "link"
             sagtus, err_message = await call_apropriate_function(
                 aria_i_p,
@@ -164,7 +164,7 @@ async def incoming_message_f(client, message):
                 # if FAILED, display the error message
                 await i_m_sefg.edit_text(err_message)
     else:
-        await i_m_sefg.edit_text("**ERR**! What have you entered. Please read /help")
+        await i_m_sefg.edit_text("**ERR**! What have you entered. Please read /help\n or read pined message")
 
 
 def extract_link_split(message):
