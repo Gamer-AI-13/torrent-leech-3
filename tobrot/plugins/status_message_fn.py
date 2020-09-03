@@ -68,7 +68,7 @@ async def status_message_f(client, message):
             msg += "\n\n"
         LOGGER.info(msg)
         if msg == "":
-            msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs \nplease wait"
+            msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs \nI'm free now🥴"
         await message.reply_text(msg, quote=True)
 
 
@@ -84,11 +84,11 @@ async def cancel_message_f(client, message):
             LOGGER.info(downloads)
             LOGGER.info(downloads.remove(force=True))
             await i_m_s_e_g.edit_text(
-                "Leech Cancelled"
+                "Leech Cancelled🤤"
             )
         except Exception as e:
             await i_m_s_e_g.edit_text(
-                "<i>FAILED</i>\n\n" + str(e) + "\n#error"
+                "<i>🤷‍♂️FAILED</i>\n\n" + str(e) + "\n#error"
             )
     else:
         await message.delete()
