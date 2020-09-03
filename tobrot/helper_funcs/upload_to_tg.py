@@ -78,7 +78,7 @@ async def upload_to_tg(
             i_m_s_g = await message.reply_text(
                 "Telegram does not support uploading this file.\n"
                 f"Detected File Size: {d_f_s} 😡\n"
-                "\n🤖 Trying to split the files ✄✂📦"
+                "\n☣ Trying to split the files ✄✂📦"
             )
             splitted_dir = await split_large_files(local_file_name)
             totlaa_sleif = os.listdir(splitted_dir)
@@ -91,7 +91,7 @@ async def upload_to_tg(
                 f"Detected File Size: {d_f_s} 😡\n"
                 f"**{ba_se_file_name}**\n"
                 f"Splitted into **{number_of_files} files**.\n"
-                "Trying to upload to Telegram, now ..."
+                "Trying to upload to Telegram, now ... \nplease wait"
             )
             akcpart = 1
             for le_file in totlaa_sleif:
@@ -105,17 +105,17 @@ async def upload_to_tg(
                 upprog = ""
                 dwnprog = ""
                 for aki in range(akcpart):
-                    upprog += "🔴"
+                    upprog += "■"
                 for aki in range(number_of_files-akcpart):
-                    dwnprog += "⭕"
+                    dwnprog += "□"
                 prog = upprog+dwnprog
                 await i_m_s_g.edit_text(
-                f"Uploaded part **[ {akcpart}/{number_of_files} ]** 📤\n"
+                f"Uploaded part **[ {akcpart}/{number_of_files} ]** ⇡\n"
                 f"{prog}"
                 )
                 akcpart = akcpart + 1
             await i_m_s_g.edit_text(
-                "All parts are uploaded ✅\n"
+                "All parts are uploaded ☑\n"
             )
         else:
             sent_message = await upload_single_file(
