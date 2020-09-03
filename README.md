@@ -1,4 +1,4 @@
-# Telegram [Torrent Leecher](https://t.me/public_leech) 🔥🤖
+# Telegram [Torrent Leecher](https://t.me/TorrentleechbyAI) 🔥🤖 Edited by AI
 
 A Telegram Torrent (and youtube-dl) Leecher based on [Pyrogram](https://github.com/pyrogram/pyrogram)
 
@@ -58,4 +58,4 @@ A Telegram Torrent (and youtube-dl) Leecher based on [Pyrogram](https://github.c
 * [Robots](https://telegram.dog/Robots) for their [@UploadBot](https://telegram.dog/UploadBot)
 * [@AjeeshNair](https://telegram.dog/AjeeshNait) for his [torrent.ajee.sh](https://torrent.ajee.sh)
 * [@gotstc](https://telegram.dog/gotstc), @aryanvikash, [@HasibulKabir](https://telegram.dog/HasibulKabir) for their TORRENT groups
-* 
+* [@gamerai](https://telegram.dog/pppppgame), me for nothing 🤪
