@@ -31,8 +31,8 @@ async def status_message_f(client, message):
         # Show All Downloads
         downloads = aria_i_p.get_downloads()
         #
-        DOWNLOAD_ICON = "📥"
-        UPLOAD_ICON = "📤"
+        DOWNLOAD_ICON = "⇣"
+        UPLOAD_ICON = "⇡"
         #
         msg = ""
         for download in downloads:
@@ -68,7 +68,7 @@ async def status_message_f(client, message):
             msg += "\n\n"
         LOGGER.info(msg)
         if msg == "":
-            msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs"
+            msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs \nplease wait"
         await message.reply_text(msg, quote=True)
 
 
